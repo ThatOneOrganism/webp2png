@@ -1,0 +1,62 @@
+<body>
+    <div class="svg-container">
+      <!-- I crated SVG with: https://codepen.io/anthonydugois/pen/mewdyZ -->
+      <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+      <script src="script.js"></script>
+      <svg viewbox="0 0 800 400" class="svg">
+        <path id="curve" fill="#1a1818" d="M 800 300 Q 400 350 0 300 L 0 0 L 800 0 L 800 300 Z">
+        </path>
+      </svg>
+    </div>
+  
+    <header>
+      <h1 data-text="&nbsp;WEBP to PNG Converter&nbsp;">&nbsp;WEBP to PNG Converter&nbsp;</h1>
+      <h2>------------------</h2>
+      <h3>Here you are, scroll down.</h>
+    </header>
+  
+    <main>  
+      <div class="container2">
+        <input type="file" id="file-input" multiple accept=".webp" />
+        <label for="file-input">
+          <i class="fa-solid fa-arrow-up-from-bracket"></i>
+          &nbsp; Choose Files To Upload
+        </label>
+        <div id="num-of-files">No Files Choosen</div>
+        <ul id="files-list"></ul>
+      </div>
+      <div class="containerm">
+        <!-- Original Convert Button -->
+        <button id="convert-btn">CONVERT</button>
+        <!-- Processing container: hidden initially -->
+        <div id="processing-container" style="display: none; opacity: 0;">
+          <div id="processing-message" style="font-family: 'Comfortaa', serif; filter: drop-shadow(0 0 20px #fff); font-size: 2rem; margin-bottom: 1em;">
+            Processing Completed
+          </div>
+          <button id="convert-again-btn">CONVERT AGAIN</button>
+        </div>
+      </div>
+      <!-- Load script once at the end of main -->
+      <p id="conversion-count" style="font-family: 'Comfortaa', serif; color: #fff; filter: drop-shadow(0 0 25px #fff); text-align: center; margin-top: 50px;"></p>
+      <!-- hell yeah, we need context! -->
+      <p id="context-text" style="font-family: 'Comfortaa', serif; color: #ccc; text-align: center; max-width: 600px; margin: 10px auto; font-size: 14px; opacity: 0.8;">
+        Tired of dumbass WebP images ruining your life? This <b>WebP to PNG Converter</b> is here to <b>save your sanity.</b> No more weird unsupported file errors, no more sketchy converters filled with ads from 2012. Just <b>upload, click, BOOM – instant PNG.</b> Works on desktop, mobile, and even your grandma’s fridge display. <b>No downloads, no BS, just raw conversion power.</b> Try it now, unless you enjoy suffering.  
+      </p>
+      <script src="script.js"></script>
+    </main>   
+
+
+    <style>
+        h1 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 65px;
+            font-weight: 900;
+        }
+    </style>
+  
+    <footer>
+      <p>WEBP to PNG Converter</p>
+      <small>✻ Made with ❤️ by TKW</a>.</small>
+    </footer>
+  </body>

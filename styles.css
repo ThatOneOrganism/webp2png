@@ -1,0 +1,256 @@
+@import 'https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap';
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  font-family: "Comfortaa" serif;
+}
+
+.svg-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+}
+
+svg {
+  path {
+    transition: .1s;
+  }
+
+  &:hover path {
+    d: path("M 800 300 Q 400 250 0 300 L 0 0 L 800 0 L 800 300 Z");
+  }
+}
+
+body {
+  background: #333;
+  color: #333;
+  position: relative;
+}
+
+h2 {
+    color: transparent
+}
+
+h3 {
+  font-family: 'Comfortaa', serif;
+  font-weight: 600;
+  filter: drop-shadow(0 0 15px #fff)
+}
+
+h1 {
+    color: #272424;
+    position: relative;
+}
+
+h1::before {
+    content: attr(data-text);
+    position: absolute;
+    color: #fff;
+    width: 350px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid #fff;
+    animation: animate 8s linear infinite;
+    filter: drop-shadow(0 0 20px #fff)
+}
+@keyframes animate
+{
+    0%,10%,100%
+    {
+        width: 0;
+    }
+    70%, 90%
+    {
+        width: 57%;
+    }
+}
+
+header {
+  color: #fff;
+  padding-top: 10vw;
+  padding-bottom: 30vw;
+  text-align: center;
+}
+
+main {
+  background: linear-gradient(to bottom, #333 0%, #202020 100%);
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  padding: 10vh 0 80vh;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+
+footer {
+  background: #161616;
+  padding: 5vh 0;
+  text-align: center;
+  position: relative;
+  font-family: 'Comfortaa', serif;
+}
+
+p {
+    color: #fff;
+    filter: drop-shadow(0 0 10px #fff)
+}
+
+small {
+  opacity: .5;
+  font-weight: 300;
+  color: #fff;
+
+  a {
+    color: inherit;
+  }
+}
+
+:root {
+  --primary: #11998e;
+  --secondary: #38ef7d;
+  --white: #fff;
+  --gray: #9b9b9b;
+}
+
+button {
+  font-size: 18px;
+  font-family: "Comfortaa", serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.7em 2em;
+  border: 3px solid #FF0072;
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16),
+  0 3px 6px rgba(0, 0, 0, 0.1);
+  color: #FF0072;
+  text-decoration: none;
+  transition: 0.3s ease all;
+  z-index: 1;
+}
+
+button::before {
+  transition: 0.5s ease all;
+  position: absolute;
+  font-family: "Comfortaa", serif;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  background-color: #FF0072;
+  z-index: -1;
+}
+
+button:hover, button:focus {
+  color: white
+}
+
+button:hover:before, button:focus:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+button:active {
+  transform: scale(0, 2);
+  font-family: "Comfortaa", serif;
+}
+
+.containerm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end; /* Push content to the bottom */
+  height: 15vh;
+}
+
+.container2 {
+  background-color: #ffffff;
+  width: 90%;
+  max-width: 34.37em;
+  font-family: "Comfortaa", serif;
+  position: relative;
+  margin: 3.12em auto;
+  padding: 3.12em 1.25em;
+  border-radius: 0.43em;
+  box-shadow: 0 1.25em 2.18em rgb(1, 28, 71, 0.3);
+}
+input[type="file"] {
+  display: none;
+}
+label {
+  display: block;
+  position: relative;
+  background-color: #25292e;
+  color: #ffffff;
+  font-size: 1.12em;
+  font-weight: 500;
+  text-align: center;
+  width: 18.75em;
+  padding: 1.12em 0;
+  margin: auto;
+  border-radius: 0.31em;
+  cursor: pointer;
+}
+#num-of-files {
+  font-weight: 700;
+  text-align: center;
+  margin: 1.25em 0 1.87em 0;
+}
+ul {
+  list-style-type: none;
+}
+.container li {
+  font-weight: 500;
+  background-color: #ffffff;
+  color: #25292e;
+  margin-bottom: 1em;
+  padding: 1.1em 1em;
+  border-radius: 0.3em;
+  display: flex;
+  justify-content: space-between;
+}
+#files-list li {
+  background-color: #222;  /* Dark background */
+  color: #fff;  /* White text */
+  padding: 8px;
+  border-radius: 5px;
+  margin: 5px 0;
+  list-style: none;  /* Remove bullet points */
+  display: flex;
+  justify-content: space-between;
+}
+
+.container2, .containerm {
+  transition: opacity 0.5s ease;
+}
+
+#processing-message {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+/* Fade-out and fade-in animation classes */
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 1s ease;
+}
